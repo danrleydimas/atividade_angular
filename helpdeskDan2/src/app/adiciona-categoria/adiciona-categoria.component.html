@@ -1,0 +1,12 @@
+<div class="container">
+
+    <h1 class="titulo">Categorias</h1>
+    <ul class="categorias">
+        <li *ngFor="let categoria of categoriaService.getCategorias()">{{categoria.nome}}</li>
+    </ul>
+    <h1 class="titulo">Adiciona categoria</h1>
+    <label for="nomeCategoriaInputText">Digite o nome da categoria</label>
+    <input id="nomeCategoriaInputText" type="text" [(ngModel)]="nomeCategoria"
+    placeholder="Digite o nome da categoria"><br>
+    <button class="botao-adiciona-categoria" (click)="adicionaCategoria()">Adiciona categoria</button>
+</div>
